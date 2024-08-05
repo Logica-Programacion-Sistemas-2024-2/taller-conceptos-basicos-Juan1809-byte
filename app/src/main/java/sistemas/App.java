@@ -6,210 +6,610 @@ package sistemas;
 public class App {
     
     // Diseñe un algoritmo para saludar al usuario: Hola usuario. El nombre del usuario es ingresado por teclado
-    public static String saludarUsuario(String nombre) {
+      // Método para saludar al usuario
+   
+    // Método para saludar al usuario
+    public static String generarSaludo(String nombre) {
         try {
-            // Lógica interna
+            // Comprobar si el nombre es nulo o vacío
+            if (nombre == null || nombre.trim().isEmpty()) {
+                return "Error: Se debe proporcionar un nombre válido.";
+            }
+            // Crear el mensaje de saludo
+            return "¡Hola, " + nombre + "!";
         } catch (Exception e) {
-            return "Error: " + e.getMessage();
+        
+            return "Se produjo un error: " + e.getMessage();
         }
-        return "";
-    }
-
-    // Diseñe un algoritmo que lea por teclado una velocidad en Km/seg y la convierta a metros/seg y a metros/hora
-    // retorne el valor en formato string (metrosPorSeg + "|" + metrosPorHora)
-    public static String convertirVelocidad(double kmPorSeg) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return "0|0";
-        }
-        return "";
-    }
-
-    // Solicitar al usuario ingresar una cantidad expresada en cc (centímetros cúbicos) y devolver su cantidad en litros
-    public static int convertirCcALitros(double cc) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Solicitar al usuario ingresar una cantidad en dólares y convertirla a pesos según la TRM del día
-    public static int convertirDolaresAPesos(double dolares, double trm) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Solicitar al usuario ingresar la temperatura en grados centígrados y convertirla en grados Fahrenheit (averiguar la fórmula) F = 32 + ( 9 * C / 5)
-    public static int convertirCelsiusAFahrenheit(double celsius) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Solicitar al usuario ingresar Nro de Días nro de horas nro de minutos y nro segundos y convertir todo a segundos.
-    public static int convertirATotalSegundos(int dias, int horas, int minutos, int segundos) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Un usuario tiene un sistema de báscula para pesar camiones, dado el peso de un camión debe sacar el peso neto de la carga en kilos y toneladas
-    // retorne el valor en formato string (pesoEnKg + "|" + pesoEnToneladas)
-    public static String calcularPesoNeto(double peso) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return "0|0";
-        }
-        return "";
-    }
-
-    // Diseñe un algoritmo que calcule el tiempo necesario para alcanzar un destino dado por el usuario quien además ingresará la velocidad promedio en kilómetros/hora y la distancia en kilómetros
-    public static int calcularTiempoViaje(double distancia, double velocidadKilometros, double velocidadHora) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Un avión necesita cargar combustible para cubrir sus rutas programadas en el día. Cada 0.2 toneladas de combustible puede recorrer 60.8 Km en velocidad de crucero. En el despegue el avión consume 1.2 toneladas de combustible y en el aterrizaje consume 0.4 toneladas. El piloto desea un algoritmo que ingresando 4 rutas y el kilometraje de cada ruta obtenga la cantidad de combustible que debe tanquear en el avión.
-    public static int calcularCombustible(double ruta1, double ruta2, double ruta3, double ruta4) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Diseñar un algoritmo que calcule el peso neto en la luna de un peso terrestre ingresado por teclado. La gravedad de la Luna es de alrededor del 17% más que la de la tierra
-    public static int calcularPesoLunar(double pesoTierra) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Diseñar un algoritmo que calcule el saldo que debe haber en una taquilla de un banco. El cajero deberá ingresar la base el total de recaudos y el total de retiros
-    public static int calcularSaldoTaquilla(double base, double ingresos, double retiros) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Diseñe un algoritmo para calcular la propina en un restaurante(10%) el impuesto al consumo (8%) y el valor final que deberá pagar ingresando el valor de la comida.
-    // retorne el valor en formato string (propina + "|" + impuesto + "|" + total)
-    public static String calcularCuentaRestaurante(double costoComida) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1 + "|" + -1 + "|" + -1;
-        }
-        return "";
-    }
-
-    // Diseñar un algoritmo que obtenga los puntos finales de un equipo de fútbol (puntuación según lineamientos de Fifa) a partir de los datos ingresados por teclado: Número de partidos ganados número de partidos perdidos número de partidos empatados.
-    public static int calcularPuntosFutbol(int ganados, int perdidos, int empatados) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Elaborar un algoritmo que dadas todas las 5 notas y los 5 porcentajes para una materia calcule la nota final.
-    public static int calcularNotaFinal(double nota1, double nota2, double nota3, double nota4, double nota5,
-                                        double porcentaje1, double porcentaje2, double porcentaje3, double porcentaje4, double porcentaje5) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Elaborar un algoritmo que dados los 5 porcentajes de una materia y las 4 primeras notas calcule cuánto tiene que sacar para ganar si el puntaje mínimo es 3.
-    public static int calcularNotaNecesaria(double porcentaje1, double porcentaje2, double porcentaje3, double porcentaje4, double porcentaje5, double nota1, double nota2, double nota3, double nota4) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Se requiere un algoritmo para calcular el salario a pagar a un trabajador con los siguientes datos ingresados por teclado: cantidad de horas normales laboradas cantidad de horas extras diurnas laboradas cantidad de horas extras nocturnas laboradas valor de la hora normal. El valor de las horas extras diurnas tienen un recargo adicional del 15% sobre la hora normal. El valor de las horas extras nocturnas tienen un recargo adicional del 35% sobre la hora normal.
-    public static int calcularSalario(int horasNormales, int horasExtrasDiurnas, int horasExtrasNocturnas, double valorHoraNormal) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Diseñe un algoritmo que calcule el área de un triángulo rectángulo.
-    public static int calcularAreaTriangulo(double base, double altura) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Diseñe un algoritmo que calcule el perímetro de un cuadrado.
-    public static int calcularPerimetroCuadrado(double lado) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Diseñe un algoritmo que calcule el volumen de un cilindro.
-    public static int calcularVolumenCilindro(double radio, double altura) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
-    }
-
-    // Diseñe un algoritmo que calcule el área del círculo. El radio se pide por teclado.
-    public static int calcularAreaCirculo(double radio) {
-        try {
-            // Lógica interna
-        } catch (Exception e) {
-            return -1;
-        }
-        return 0;
     }
 
     public static void main(String[] args) {
+     
+        Scanner entrada = new Scanner(System.in);
         
+      
+        System.out.print("Introduce tu nombre: ");
+        String nombreUsuario = entrada.nextLine();
+        
+        String saludo = generarSaludo(nombreUsuario);
+        System.out.println(saludo);
+        
+        // Cerrar el Scanner para liberar recursos
+        entrada.close();
+    }
+}
+    // Diseñe un algoritmo que lea por teclado una velocidad en Km/seg y la convierta a metros/seg y a metros/hora
+    // retorne el valor en formato string (metrosPorSeg + "|" + metrosPorHora)
+   // Convierte una cantidad de centímetros cúbicos a litros
+  // Convierte la velocidad de kilómetros por segundo a metros por segundo y metros por hora
+     // Calcula la velocidad en metros por segundo y metros por hora a partir de kilómetros por segundo
+    public static String calcularVelocidades(double kmPorSegundo) {
+        try {
+            // Convertir kilómetros por segundo a metros por segundo
+            double metrosPorSegundo = kmPorSegundo * 1000;
+            // Convertir metros por segundo a metros por hora
+            double metrosPorHora = metrosPorSegundo * 3600;
+            // Retornar el resultado formateado como un String
+            return String.format("%.2f|%.2f", metrosPorSegundo, metrosPorHora);
+        } catch (Exception e) {
+            // En caso de error, retornar un valor por defecto
+            return "0.00|0.00";
+        }
+    }
+
+    public static void main(String[] args) {
+        // Velocidad dada en kilómetros por segundo
+        double velocidadKmPorSegundo = 2.0;
+        
+        // Calcular la velocidad en metros por segundo y metros por hora
+        String resultadoConversion = calcularVelocidades(velocidadKmPorSegundo);
+        
+        // Imprimir el resultado de la conversión
+        System.out.println("Resultado de la conversión: " + resultadoConversion);
+    }
+}
+    // Solicitar al usuario ingresar una cantidad expresada en cc (centímetros cúbicos) y devolver su cantidad en litros
+     // Convierte una cantidad de centímetros cúbicos a litros
+    public static double convertirCcALitros(double centimetrosCubicos) {
+        try {
+            // Realizar la conversión de centímetros cúbicos a litros
+            double litros = centimetrosCubicos / 1000;
+            return litros;
+        } catch (Exception ex) {
+            // Retornar -1 en caso de error
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Cantidad en centímetros cúbicos a convertir
+        double centimetrosCubicos = 1200; 
+        
+        // Convertir la cantidad a litros
+        double litros = convertirCcALitros(centimetrosCubicos);
+        
+        // Mostrar el resultado de la conversión
+        if (litros != -1) {
+            System.out.println(centimetrosCubicos + " cc son igual a " + litros + " litros");
+        } else {
+            System.out.println("Error al convertir la cantidad");
+        }
+    }
+}
+    // Solicitar al usuario ingresar una cantidad en dólares y convertirla a pesos según la TRM del día
+      // Convierte una cantidad de dólares a pesos usando una tasa de cambio
+    public static double convertirDolaresAPesos(double cantidadDolares, double tasaCambio){
+        double resultadoEnPesos;
+        try {
+            // Calcular el monto en pesos
+            resultadoEnPesos = dolares * tasaDeCambio;
+        } catch (Exception e) {
+            // Si ocurre un error, devolver -1
+            resultadoEnPesos = -1;
+        }
+        return resultadoEnPesos;
+    }
+
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer entradas del usuario
+        Scanner lector = new Scanner(System.in);
+
+        // Solicitar al usuario la cantidad en dólares
+        System.out.print("Ingrese la cantidad en dólares: ");
+        double cantidadDolares = lector.nextDouble();
+
+        // Solicitar al usuario la tasa de cambio
+        System.out.print("Ingrese la tasa de cambio a pesos: ");
+        double tasaDeCambio = lector.nextDouble();
+
+        // Realizar la conversión de dólares a pesos
+        double cantidadPesos = convertirDolaresAPesos(cantidadDolares, tasaDeCambio);
+
+        // Mostrar el resultado de la conversión
+        if (cantidadPesos != -1) {
+            System.out.println(cantidadDolares + " dólares equivalen a " + cantidadPesos + " pesos.");
+        } else {
+            System.out.println("Hubo un error en la conversión.");
+        }
+
+        // Cerrar el objeto Scanner
+        lector.close();
+    }
+}
+
+  // Solicitar al usuario ingresar la temperatura en grados centígrados y convertirla en grados Fahrenheit (averiguar la fórmula) F = 32 + ( 9 * C / 5)
+ // Convierte una temperatura de grados Celsius a grados Fahrenheit
+    public static double convertirCelsiusAFahrenheit(double gradosCelsius) {
+        try {
+            // Convertir grados Celsius a grados Fahrenheit
+            double gradosFahrenheit = 32 + (9 * gradosCelsius / 5);
+            return gradosFahrenheit;
+        } catch (Exception ex) {
+            // Retornar -1 en caso de error
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Definir la temperatura en grados Celsius
+        double gradosCelsius = 32; 
+        
+        // Convertir la temperatura a grados Fahrenheit
+        double gradosFahrenheit = convertirCelsiusAFahrenheit(gradosCelsius);
+        
+        // Mostrar el resultado de la conversión
+        if (gradosFahrenheit != -1) {
+            System.out.println(gradosCelsius + " grados Celsius son " + gradosFahrenheit + " grados Fahrenheit");
+        } else {
+            System.out.println("Error al convertir la temperatura");
+        }
+    }
+}
+// Solicitar al usuario ingresar Nro de Días nro de horas nro de minutos y nro segundos y convertir todo a segundos.
+ // Convierte días, horas, minutos y segundos a un total en segundos
+    public static int convertirTotalSegundos(int numDias, int numHoras, int numMinutos, int numSegundos) {
+        try {
+            // Verificar que todos los parámetros sean no negativos
+            if (numDias < 0 || numHoras < 0 || numMinutos < 0 || numSegundos < 0) {
+                throw new Exception("Todos los parámetros deben ser no negativos");
+            }
+
+            // Calcular el total de segundos
+            int totalSegundos = (numDias * 24 * 60 * 60) + 
+                                (numHoras * 60 * 60) + 
+                                (numMinutos * 60) + 
+                                numSegundos;
+
+            return totalSegundos;
+        } catch (Exception ex) {
+            // Retornar -1 en caso de error
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+        
+        // Leer el número de días, horas, minutos y segundos del usuario
+        System.out.println("Ingrese el número de días:");
+        int numDias = scanner.nextInt();
+        
+        System.out.println("Ingrese el número de horas:");
+        int numHoras = scanner.nextInt();
+        
+        System.out.println("Ingrese el número de minutos:");
+        int numMinutos = scanner.nextInt();
+        
+        System.out.println("Ingrese el número de segundos:");
+        int numSegundos = scanner.nextInt();
+        
+        // Convertir a total de segundos
+        int totalSegundos = convertirTotalSegundos(numDias, numHoras, numMinutos, numSegundos);
+        
+        // Mostrar el resultado
+        if (totalSegundos != -1) {
+            System.out.println("El total de segundos es: " + totalSegundos);
+        } else {
+            System.out.println("Error en la conversión: " + "Todos los parámetros deben ser no negativos");
+        }
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+    }
+}
+// Un usuario tiene un sistema de báscula para pesar camiones, dado el peso de un camión debe sacar el peso neto de la carga en kilos y toneladas
+// retorne el valor en formato string (pesoEnKg + "|" + pesoEnToneladas)
+public static String calcular_Peso_Neto(double pesoCamion) {
+    try {
+        double pesoCamionVacio = 2780;
+        double pesoNetoKg = pesoCamion - pesoCamionVacio;
+        double pesoNetoToneladas = pesoNetoKg / 1000;
+        return String.format("%.2f|%.2f", pesoNetoKg, pesoNetoToneladas);
+    } catch (Exception ex) {
+        return "0|0";
+    }
+}
+
+public static void main_Calcular_Peso(String[] args) {
+    double pesoCamion = 22000; 
+    String pesoNeto = calcular_Peso_Neto(pesoCamion);
+    System.out.println("Peso neto: " + pesoNeto);
+}
+
+
+// Diseñe un algoritmo que calcule el tiempo necesario para alcanzar un destino dado por el usuario quien además ingresará la velocidad promedio en kilómetros/hora y la distancia en kilómetros
+public static double calcular_Tiempo_Viaje(double distanciaKm, double velocidadPromedio) {
+    try {
+        double tiempoViaje = distanciaKm / velocidadPromedio;
+        return tiempoViaje;
+    } catch (Exception ex) {
+        return -1;
+    }
+}
+
+public static void main_Calcular_Tiempo(String[] args) {
+    double distanciaKm = 289; 
+    double velocidadPromedio = 340; 
+    double tiempoViaje = calcular_Tiempo_Viaje(distanciaKm, velocidadPromedio);
+    if (tiempoViaje != -1) {
+        System.out.println("Tiempo necesario para alcanzar el destino: " + tiempoViaje + " horas");
+    } else {
+        System.out.println("Error al calcular el tiempo de viaje");
+    }
+}
+
+// Un avión necesita cargar combustible para cubrir sus rutas programadas en el día. Cada 0.2 toneladas de combustible puede recorrer 60.8 Km en velocidad de crucero. En el despegue el avión consume 1.2 toneladas de combustible y en el aterrizaje consume 0.4 toneladas. El piloto desea un algoritmo que ingresando 4 rutas y el kilometraje de cada ruta obtenga la cantidad de combustible que debe tanquear en el avión.
+// Método que calcula la cantidad de combustible necesaria para el vuelo
+    public static double calcularCombustible(double ruta1, double ruta2, double ruta3, double ruta4) {
+        try {
+            // Sumar las distancias de las rutas
+            double distanciaTotal = ruta1 + ruta2 + ruta3 + ruta4;
+
+            // Calcular el combustible necesario
+            double combustible = distanciaTotal / 60.8;
+            combustible += 1.2 + 0.4;
+            combustible /= 0.2;
+
+            return combustible;
+        } catch (Exception e) {
+            // Manejar errores y retornar -1 en caso de problemas
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Definir las distancias de las rutas en kilómetros
+        double ruta1 = 160; 
+        double ruta2 = 30; 
+        double ruta3 = 2500; 
+        double ruta4 = 467; 
+
+        // Calcular la cantidad de combustible necesario
+        double cantidadCombustible = calcularCombustible(ruta1, ruta2, ruta3, ruta4);
+
+        // Mostrar el resultado de la cantidad de combustible necesario
+        if (cantidadCombustible != -1) {
+            System.out.println("La cantidad de combustible necesaria para el avión es: " + cantidadCombustible + " toneladas.");
+        } else {
+            System.out.println("Error al calcular la cantidad de combustible.");
+        }
+    }
+}
+// Diseñar un algoritmo que calcule el peso neto en la luna de un peso terrestre ingresado por teclado. La gravedad de la Luna es de alrededor del 17% más que la de la tierra
+public static double calcularPesoLunar(double pesoTierra) {
+    try {
+        double gravedadLuna = 0.83; 
+        double pesoLuna = pesoTierra * gravedadLuna;
+        return pesoLuna;
+    } catch (Exception e) {
+        return -1;
+    }
+}
+
+public static void main_Peso_Luna(String[] args) {
+    double pesoTierra = 9000; 
+    double pesoLuna = calcularPesoLunar(pesoTierra);
+    if (pesoLuna != -1) {
+        System.out.println("El peso neto en la luna es: " + pesoLuna + " kilogramos");
+    } else {
+        System.out.println("Error al calcular el peso neto en la luna");
+    }
+}
+
+// Diseñar un algoritmo que calcule el saldo que debe haber en una taquilla de un banco. El cajero deberá ingresar la base el total de recaudos y el total de retiros
+public static double calcularSaldoTaquilla(double montoBase, double montoIngresos, double montoRetiros) {
+    try {
+        double saldoFinal = montoBase + montoIngresos - montoRetiros;
+        return saldoFinal;
+    } catch (Exception e) {
+        return -1;
+    }
+}
+
+public static void main_Saldo_Taquilla(String[] args) {
+    double montoBase = 2578; 
+    double montoIngresos = 890; 
+    double montoRetiros = 23000; 
+    double saldoFinal = calcularSaldoTaquilla(montoBase, montoIngresos, montoRetiros);
+    if (saldoFinal != -1) {
+        System.out.println("El saldo que debe haber en la taquilla es: " + saldoFinal);
+    } else {
+        System.out.println("Error al calcular el saldo que debe haber en la taquilla");
+    }
+}
+
+// Diseñe un algoritmo para calcular la propina en un restaurante (10%), el impuesto al consumo (8%) y el valor final que deberá pagar ingresando el valor de la comida.
+// retorne el valor en formato string (propina + "|" + impuesto + "|" + total)
+public static String calcularCuentaRestaurante(double costoPlatillo) {
+    try {
+        double montoPropina = costoPlatillo * 0.1;
+        double montoImpuesto = costoPlatillo * 0.08;
+        double montoTotal = costoPlatillo + montoPropina + montoImpuesto;
+        return String.format("%.2f|%.2f|%.2f", montoPropina, montoImpuesto, montoTotal);
+    } catch (Exception e) {
+        return -1 + "|" + -1 + "|" + -1;
+    }
+}
+
+public static void main_Cuenta_Restaurante(String[] args) {
+    double costoPlatillo = 3500; 
+    String[] resultado = calcularCuentaRestaurante(costoPlatillo).split("\\|");
+    if (!resultado[0].equals("-1") && !resultado[1].equals("-1") && !resultado[2].equals("-1")) {
+        System.out.println("Propina: " + resultado[0]);
+        System.out.println("Impuesto al consumo: " + resultado[1]);
+        System.out.println("Total: " + resultado[2]);
+    } else {
+        System.out.println("Error al calcular la cuenta del restaurante");
+    }
+}
+
+// Diseñar un algoritmo que obtenga los puntos finales de un equipo de fútbol (puntuación según lineamientos de Fifa) a partir de los datos ingresados por teclado: Número de partidos ganados, número de partidos perdidos, número de partidos empatados.
+  // Calcula los puntos finales en un torneo de fútbol
+  public static void main(String[] args) {
+        // Definir nuevas notas y porcentajes
+        double[] notas = {3.8, 4.2, 5.0, 2.9, 4.5};
+        double[] porcentajes = {25, 15, 20, 10, 30};
+        
+        // Calcular la nota final
+        double notaFinal = calcularNotaFinal(notas, porcentajes);
+        
+        // Mostrar el resultado del cálculo
+        if (notaFinal != -1) {
+            System.out.println("La nota final es: " + notaFinal);
+        } else {
+            System.out.println("Error al calcular la nota final");
+        }
+    }
+
+    // Calcula la nota final ponderada basada en las notas y sus porcentajes
+    public static double calcularNotaFinal(double[] notas, double[] porcentajes) {
+        try {
+            // Verificar que el número de notas y porcentajes sea el mismo
+            if (notas.length != porcentajes.length) {
+                throw new Exception("El número de notas debe coincidir con el número de porcentajes");
+            }
+
+            // Verificar que los porcentajes sumen 100
+            double sumaPorcentajes = 0;
+            for (double porcentaje : porcentajes) {
+                sumaPorcentajes += porcentaje;
+            }
+            if (sumaPorcentajes != 100) {
+                throw new Exception("Los porcentajes deben sumar 100");
+            }
+
+            // Calcular la nota final ponderada
+            double notaFinal = 0;
+            for (int i = 0; i < notas.length; i++) {
+                notaFinal += notas[i] * porcentajes[i] / 100;
+            }
+
+            return notaFinal;
+        } catch (Exception e) {
+            // Retornar -1 en caso de error
+            return -1;
+        }
+    }
+}
+
+
+// Elaborar un algoritmo que dados los 5 porcentajes de una materia y las 4 primeras notas calcule cuánto tiene que sacar para ganar si el puntaje mínimo es 3.
+public class NotaNecesariaCalculator {
+
+    // Calcula la nota necesaria para alcanzar el puntaje mínimo
+    public static double calcularNotaNecesaria(double nota1, double nota2, double nota3, double nota4, 
+                                               double porcentaje1, double porcentaje2, double porcentaje3, double porcentaje4, double porcentaje5, 
+                                               double puntajeMinimo) {
+        try {
+            // Verificar que los porcentajes sumen 100
+            double sumaPorcentajes = porcentaje1 + porcentaje2 + porcentaje3 + porcentaje4 + porcentaje5;
+            if (sumaPorcentajes != 100) {
+                throw new Exception("Los porcentajes deben sumar 100");
+            }
+
+            // Calcular la nota necesaria en la quinta evaluación
+            double sumaNotas = (nota1 * porcentaje1 + nota2 * porcentaje2 + nota3 * porcentaje3 + nota4 * porcentaje4);
+            double notaNecesaria = (puntajeMinimo * 100 - sumaNotas) / porcentaje5;
+            return notaNecesaria;
+        } catch (Exception e) {
+            // Retornar -1 en caso de error
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrar las 4 primeras notas
+        double nota1 = 4.5; // Nota 1
+        double nota2 = 5.0; // Nota 2
+        double nota3 = 2.0; // Nota 3
+        double nota4 = 3.2; // Nota 4
+
+        // Entrar los porcentajes de las primeras 4 notas y el porcentaje de la quinta nota
+        double porcentaje1 = 20; // Porcentaje de la Nota 1
+        double porcentaje2 = 20; // Porcentaje de la Nota 2
+        double porcentaje3 = 15; // Porcentaje de la Nota 3
+        double porcentaje4 = 20; // Porcentaje de la Nota 4
+        double porcentaje5 = 25; // Porcentaje de la Nota 5
+
+        // Entrar el puntaje mínimo requerido
+        double puntajeMinimo = 3.0; // Puntaje mínimo necesario para aprobar
+
+        // Calcular la nota necesaria
+        double notaNecesaria = calcularNotaNecesaria(nota1, nota2, nota3, nota4, porcentaje1, porcentaje2, porcentaje3, porcentaje4, porcentaje5, puntajeMinimo);
+
+        if (notaNecesaria != -1) {
+            System.out.println("Para alcanzar el puntaje mínimo de " + puntajeMinimo + ", necesitas obtener " + notaNecesaria + " en la quinta evaluación.");
+        } else {
+            System.out.println("Error al calcular la nota necesaria.");
+        }
+
+        scanner.close();
+    }
+}
+    // Se requiere un algoritmo para calcular el salario a pagar a un trabajador con los siguientes datos ingresados por teclado: cantidad de horas normales laboradas cantidad de horas extras diurnas laboradas cantidad de horas extras nocturnas laboradas valor de la hora normal. El valor de las horas extras diurnas tienen un recargo adicional del 15% sobre la hora normal. El valor de las horas extras nocturnas tienen un recargo adicional del 35% sobre la hora normal.
+    public static double calcularSalario(int horasNormales, int horasExtrasDiurnas, int horasExtrasNocturnas, double tarifaHoraNormal) {
+        try {
+            double tarifaHoraExtraDiurna = tarifaHoraNormal * 1.15;
+            double tarifaHoraExtraNocturna = tarifaHoraNormal * 1.35;
+            double salarioTotal = (horasNormales * tarifaHoraNormal) + (horasExtrasDiurnas * tarifaHoraExtraDiurna) + (horasExtrasNocturnas * tarifaHoraExtraNocturna);
+            return salarioTotal;
+        } catch (Exception e) {
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese la cantidad de horas normales laboradas: ");
+        int horasNormales = scanner.nextInt();
+
+        System.out.print("Ingrese la cantidad de horas extras diurnas laboradas: ");
+        int horasExtrasDiurnas = scanner.nextInt();
+
+        System.out.print("Ingrese la cantidad de horas extras nocturnas laboradas: ");
+        int horasExtrasNocturnas = scanner.nextInt();
+
+        System.out.print("Ingrese el valor de la hora normal: ");
+        double tarifaHoraNormal = scanner.nextDouble();
+
+        double salarioTotal = calcularSalario(horasNormales, horasExtrasDiurnas, horasExtrasNocturnas, tarifaHoraNormal);
+        if (salarioTotal != -1) {
+            System.out.println("El salario a pagar al trabajador es: " + salarioTotal);
+        } else {
+            System.out.println("Error al calcular el salario");
+        }
+    }
+
+    // Diseñe un algoritmo que calcule el área de un triángulo rectángulo.
+    public static double calcularAreaTriangulo(double base, double altura) {
+        try {
+            if (base <= 0 || altura <= 0) {
+                throw new Exception("La base y la altura deben ser positivas");
+            }
+            double area = (base * altura) / 2;
+            return area;
+        } catch (Exception e) {
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        double baseTriangulo = 3;
+        double alturaTriangulo = 10;
+
+        double area = calcularAreaTriangulo(baseTriangulo, alturaTriangulo);
+        if (area != -1) {
+            System.out.println("El área del triángulo es: " + area);
+        } else {
+            System.out.println("Error al calcular el área del triángulo");
+        }
+    }
+
+    // Diseñe un algoritmo que calcule el perímetro de un cuadrado.
+    public static double calcularPerimetroCuadrado(double lado) {
+        try {
+            if (lado <= 0) {
+                throw new Exception("El lado del cuadrado debe ser positivo");
+            }
+            double perimetro = 4 * lado;
+            return perimetro;
+        } catch (Exception e) {
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        double ladoCuadrado = 25;
+
+        double perimetro = calcularPerimetroCuadrado(ladoCuadrado);
+        if (perimetro != -1) {
+            System.out.println("El perímetro del cuadrado es: " + perimetro);
+        } else {
+            System.out.println("Error al calcular el perímetro del cuadrado");
+        }
+    }
+
+    // Diseñe un algoritmo que calcule el volumen de un cilindro.
+    public static double calcularVolumenCilindro(double radio, double altura) 
+       // Método para calcular el volumen del cilindro
+    public static double calcularVolumenCilindro(double radio, double altura) {
+        // Definir el valor de PI
+        final double PI = 3.14159;
+        // Usar la fórmula del volumen del cilindro: V = PI * radio^2 * altura
+        return PI * radio * radio * altura;
+    }
+
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese el radio del cilindro
+        System.out.print("Ingrese el radio del cilindro: ");
+        double radio = scanner.nextDouble();
+
+        // Solicitar al usuario que ingrese la altura del cilindro
+        System.out.print("Ingrese la altura del cilindro: ");
+        double altura = scanner.nextDouble();
+
+        // Calcular el volumen usando el método calcularVolumenCilindro
+        double volumen = calcularVolumenCilindro(radio, altura);
+
+        // Mostrar el resultado
+        System.out.println("El volumen del cilindro con radio " + radio + " y altura " + altura + " es: " + volumen);
+
+        // Cerrar el scanner para liberar recursos
+        scanner.close();
+    }
+}
+// Diseñe un algoritmo que calcule el área del círculo. El radio se pide por teclado.
+public static double calcularAreaCirculo(double radioCirculo) {
+     // Método para calcular el área del círculo
+    public static double calcularArea(double radio) {
+        // Definir el valor de PI
+        final double PI = 3.14159;
+        // Usar la fórmula del área del círculo: A = PI * radio^2
+        return PI * radio * radio;
+    }
+
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese el radio del círculo
+        System.out.print("Ingrese el radio del círculo: ");
+        double radio = scanner.nextDouble();
+
+        // Calcular el área usando el método calcularArea
+        double area = calcularArea(radio);
+
+        // Mostrar el resultado
+        System.out.println("El área del círculo con radio " + radio + " es: " + area);
+
+        // Cerrar el scanner para liberar recursos
+        scanner.close();
     }
 }
